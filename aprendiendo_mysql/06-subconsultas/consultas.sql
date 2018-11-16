@@ -30,6 +30,8 @@ SELECT * FROM usuarios WHERE id
 SELECT CONCAT(nombre, ' ', apellidos) AS 'El usuario con mas entradas es:' FROM usuarios WHERE id 
     =(SELECT usuario_id FROM entradas GROUP BY usuario_id ORDER BY COUNT(id) DESC LIMIT 1);
 -- Mostrar usuarios en orden desendente en función a su numero de entradas
-SELECT CONCAT(nombre, ' ', apellidos) AS 'El usuario con mas entradas es:' FROM usuarios WHERE id 
-    IN(SELECT usuario_id FROM entradas GROUP BY usuario_id ORDER BY COUNT(id) DESC LIMIT 1);
+SELECT nombre FROM usuarios WHERE id 
+    IN(SELECT usuario_id FROM entradas GROUP BY usuario_id ORDER BY COUNT(id));
 -- Mostrar categorias sin entradas
+SELECT * FROM categorias WHERE id
+   NOT IN(SELECT categoria_id FROM entradas);
