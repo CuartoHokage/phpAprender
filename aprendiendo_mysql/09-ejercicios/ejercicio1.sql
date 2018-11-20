@@ -58,3 +58,44 @@ CREATE TABLE encargos(
 )ENGINE=InnoDB;
 
 -- RELLENAR LA BASE DE DATOS (INSERTS)
+    -- coches
+    INSERT INTO coches VALUES(NULL, 'renauld clio', 'renauld', 12000, 13);
+    INSERT INTO coches VALUES(NULL, 'Mazda 3', 'Mazda', 22000, 23);
+    INSERT INTO coches VALUES(NULL, 'Corsa', 'Chevrolet', 19000, 6);
+    INSERT INTO coches VALUES(NULL, 'xyz', 'BMW', 10000, 30);
+    INSERT INTO coches VALUES(NULL, 'Porshe 911', 'Porshe', 32000, 43);
+    INSERT INTO coches VALUES(NULL, 'Mustang 3', 'Ford', 42000, 93);
+    -- grupos
+    INSERT INTO grupos VALUES(NULL, 'Vendedores A', 'Manta');
+    INSERT INTO grupos VALUES(NULL, 'Vendedores B', 'Manta');
+    INSERT INTO grupos VALUES(NULL, 'Vendedores mecánicos', 'Manta');
+    INSERT INTO grupos VALUES(NULL, 'Vendedores A', 'Guayaquil');
+    INSERT INTO grupos VALUES(NULL, 'Vendedores B', 'Guayaquil');
+    INSERT INTO grupos VALUES(NULL, 'Vendedores C', 'Guayaquil');
+    INSERT INTO grupos VALUES(NULL, 'Vendedores A', 'Cuenca');
+    INSERT INTO grupos VALUES(NULL, 'Vendedores B', 'Quito');
+    INSERT INTO grupos VALUES(NULL, 'Vendedores C', 'Quito');
+    -- vendedore
+    INSERT INTO vendedores VALUES(NULL, 1, null, 'Jaime', 'Paz', 'Responsable de tienda', CURDATE(), 30000, 4);
+    INSERT INTO vendedores VALUES(NULL, 1, 1, 'Michelle', 'Ramirez', 'Ayudante de tienda', CURDATE(), 30000, 4);
+    INSERT INTO vendedores VALUES(NULL, 2, null, 'Jaime', 'Paz', 'Responsable de tienda', CURDATE(), 30000, 4);
+    INSERT INTO vendedores VALUES(NULL, 2, 3, 'Jaime', 'Paz', 'Responsable de tienda', CURDATE(), 30000, 4);
+    INSERT INTO vendedores VALUES(NULL, 3, null, 'Jaime', 'Paz', 'Responsable de ventas', CURDATE(), 30000, 4);
+    INSERT INTO vendedores VALUES(NULL, 4, null, 'Jaime', 'Paz', 'Mecanico jefe', CURDATE(), 30000, 4);
+    INSERT INTO vendedores VALUES(NULL, 5, null, 'Jaime', 'Paz', 'Vendedor experto', CURDATE(), 30000, 4);
+    INSERT INTO vendedores VALUES(NULL, 6, null, 'Jaime', 'Paz', 'Jefe de TI', CURDATE(), 30000, 4);
+    INSERT INTO vendedores VALUES(NULL, 6, 8, 'Jaime', 'Paz', 'Ejecutivo de tienda', CURDATE(), 30000, 4);
+
+    -- clientes
+    INSERT INTO clientes VALUES(NULL, 1,'Jaime Paz Mero S.A', 'Manta', 24000 ,CURDATE());
+    INSERT INTO clientes VALUES(NULL, 2,'Konothec S.A', 'Manta', 30000 ,CURDATE());
+    INSERT INTO clientes VALUES(NULL, 2,'Naruto S.A', 'Guayaquil', 66000 ,CURDATE());
+    INSERT INTO clientes VALUES(NULL, 2,'Galletitas S.A', 'Quito', 66000 ,CURDATE());
+    INSERT INTO clientes VALUES(NULL, 2,'Galletitas2 S.A', 'Quito', 12000 ,CURDATE());
+    -- encargos
+    INSERT INTO encargos VALUES(NULL, 2, 1, 2 ,CURDATE());
+    INSERT INTO encargos VALUES(NULL, 3, 4, 3 ,CURDATE());
+    INSERT INTO encargos VALUES(NULL, 4, 2, 3 ,CURDATE());
+    INSERT INTO encargos VALUES(NULL, 5, 2, 3 ,CURDATE());
+    INSERT INTO encargos VALUES(NULL, 6, 1, 1 ,CURDATE());
+    
