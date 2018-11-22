@@ -97,5 +97,5 @@ CREATE TABLE encargos(
     INSERT INTO encargos VALUES(NULL, 3, 4, 3 ,CURDATE());
     INSERT INTO encargos VALUES(NULL, 4, 2, 3 ,CURDATE());
     INSERT INTO encargos VALUES(NULL, 5, 2, 3 ,CURDATE());
-    INSERT INTO encargos VALUES(NULL, 6, 1, 1 ,CURDATE());
+    INSERT INTO encargos VALUES(NULL, 6, 2, 5 ,CURDATE());
     
