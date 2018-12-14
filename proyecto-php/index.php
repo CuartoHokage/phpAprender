@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/style.css">
     <title>Blog de videojuegos</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/estilos.css">
+    
 </head>
 <body>
     <!-- Cabecera -->
@@ -16,6 +18,7 @@
                 Blog de videojuegos
             </a>
         </div>
+
         <nav id="nav">
             <ul>
                 <li>
@@ -41,6 +44,7 @@
                 </li>
             </ul>
         </nav>
+        <div class="clearfix"></div>
     </header>
     <div id="container">
     <!-- sidebar (barra lateral) -->
