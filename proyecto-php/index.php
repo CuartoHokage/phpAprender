@@ -46,7 +46,7 @@
         </nav>
         <div class="clearfix"></div>
     </header>
-    <div id="container">
+    <div id="contenedor">
     <!-- sidebar (barra lateral) -->
         <aside id="sidebar">
         <!-- Login -->
@@ -54,10 +54,10 @@
                 <h3>Identificate</h3>
                 <form action="login.php" method="POST">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email1">
 
                     <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password1">
 
                     <input type="submit" value="Entrar">
                 </form>
