@@ -98,3 +98,57 @@ body{
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+/* Barra lateral */
+#sidebar{
+    float: right;
+    width: 25%;
+    min-height: 900px;
+}
+
+/* Principal */
+#principal{
+    float:left;
+    width: 65%;
+    min-height: 550px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: opx opx 5px #ccc;
+    margin-left: 20px;
+    overflow: hidden;
+    padding: 20px;
+}
+#principal h1{
+    font-size: 32px;
+    color: #444;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #ccc;
+    font-family: "fajala";
+}
+#principal a{
+    color: #333;
+}
+#principal h2{
+    font-size: 20px;
+    color: #2979cd;
+    letter-spacing: 1px;
+    font-family: "fajala";
+    text-shadow: 1px 1px 2px #ccc;
+    margin-top: 25px;
+}
+
+#principal p{
+    margin-top:8px;
+}
+#ver-todas a{
+    display: block;
+    border-radius: 2px;
+    padding: 15px;
+    color:white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    width: 160px;
+    margin: 0px auto;
+    margin-top: 40px;
+}
