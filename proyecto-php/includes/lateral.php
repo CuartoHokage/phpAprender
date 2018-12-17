@@ -17,7 +17,7 @@
 <!-- Registro -->
     <div id="registro" class="block-aside">
         <?php if(isset($_SESSION['errores'])):?>
-        <?php var_dump($_SESSION['errores']);?>
+        <!-- <?php var_dump($_SESSION['errores']);?> -->
         <?php endif;?>
         <h3>Registrarte</h3>
         <!-- Mostrar errores -->
@@ -51,6 +51,6 @@
 
             <input type="submit" name="submit" value="Registrar">
         </form>
-        <?php borrarErrores()?>
+        <?php borrarErrores();?>
     </div>
 </aside>

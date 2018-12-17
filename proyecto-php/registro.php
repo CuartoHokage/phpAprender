@@ -53,7 +53,7 @@ if(isset($_POST)){
         // var_dump(mysqli_error($db));
         // die();
         if($guardar){
-            $_SESSION['completado']="EL registro se a completado con exito";
+            $_SESSION['completado']="El registro se a completado con exito";
         }else{
             $_SESSION['errores']['general']= "Fallo al guardar el usuario";
         }
