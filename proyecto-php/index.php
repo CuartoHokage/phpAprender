@@ -3,38 +3,24 @@
 <!-- Caja central -->
 <div id="principal">
     <h1>Últimas entradas</h1>
+    <?php
+        $entradas= conseguirEntradas($db);
+        if(!empty($entradas)):
+            while($entrada= mysqli_fetch_assoc($entradas)):
+    ?>
     <article class="entrada">
         <a href="">
-            <h2>Titulo de mi entrada</h2>
+            <h2><?=$entrada['titulo']?></h2>
+            <span class="fecha"><?=$entrada['categoria'].' | '.$entrada['fecha']?></span>
             <p>
-                Descripción de la entrada.
+                <?=substr($entrada['descripcion'], 0, 180)."..."?>
             </p>
         </a>
     </article>
-    <article class="entrada">
-        <a href="">
-            <h2>Titulo de mi entrada</h2>
-            <p>
-                Descripción de la entrada.
-            </p>
-        </a>
-    </article>
-    <article class="entrada">
-        <a href="">
-            <h2>Titulo de mi entrada</h2>
-            <p>
-                Descripción de la entrada.
-            </p>
-        </a>
-    </article>
-    <article class="entrada">
-        <a href="">
-            <h2>Titulo de mi entrada</h2>
-            <p>
-                Descripción de la entrada.
-            </p>
-        </a>
-    </article>
+    <?php
+            endwhile;
+        endif;
+    ?>
     <div id="ver-todas">
         <a href="">Ver todas las entradas</a>
     </div>

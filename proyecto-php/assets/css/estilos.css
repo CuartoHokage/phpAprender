@@ -38,6 +38,12 @@ body{
 .alerta-error{
     background-color: #ff1919bd;
 }
+/* Estilos de fecha */
+.fecha{
+    color: #867b7bf2;
+    margin-top: 5px;
+    font-size: 14px;
+}
 
 /* Estilos de la cabecera */
 

@@ -1,5 +1,4 @@
 <!-- sidebar (barra lateral) -->
-<?php require_once 'includes/helpers.php';?>
 <aside id="sidebar">
 <?php if(isset($_SESSION['usuario'])): ?>
 <div id="usuario-logueado" class="block-aside">
@@ -12,6 +11,7 @@
 </div>
 <?php endif;?>
 <!-- Login -->
+    <?php if(!isset($_SESSION['usuario'])): ?>
     <div id="login" class="block-aside">
         <h3>Identificate</h3>
         <!-- Inicio Error de identificación -->
@@ -72,4 +72,5 @@
         </form>
         <?php borrarErrores();?>
     </div>
+<?php endif;?>
 </aside>
