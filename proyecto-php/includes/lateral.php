@@ -1,9 +1,31 @@
 <!-- sidebar (barra lateral) -->
 <?php require_once 'includes/helpers.php';?>
 <aside id="sidebar">
+<?php if(isset($_SESSION['usuario'])): ?>
+<div id="usuario-logueado" class="block-aside">
+    <h3>Bienvenida, <?= $_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos']?></h3>
+    <!-- Botones -->
+    <a href="cerrar.php" class="boton boton-verde">Entradas</a>
+    <a href="cerrar.php" class="boton">Crear categorías</a>
+    <a href="cerrar.php" class="boton boton-naranja">Mis datos</a>
+    <a href="cerrar.php" class="boton boton-rojo">Cerrar sesión</a>
+</div>
+<?php endif;?>
 <!-- Login -->
     <div id="login" class="block-aside">
         <h3>Identificate</h3>
+        <!-- Inicio Error de identificación -->
+        <?php if(isset($_SESSION['error_login'])): ?>
+            <div class="alerta alerta-error">
+                <?= $_SESSION['error_login'];?>
+                <!-- inicio if  -->
+                <?php if(isset($_SESSION['usuario'])): ?>
+                    <?php $_SESSION['error_login']=null;?>
+                <?php endif;?>
+                <!-- Fin if -->
+            </div>
+        <?php endif;?>
+        <!-- fin error de identificación -->
         <form action="login.php" method="POST">
             <label for="email">Email</label>
             <input type="email" name="email" id="email1">
@@ -16,9 +38,6 @@
     </div>
 <!-- Registro -->
     <div id="registro" class="block-aside">
-        <?php if(isset($_SESSION['errores'])):?>
-        <!-- <?php var_dump($_SESSION['errores']);?> -->
-        <?php endif;?>
         <h3>Registrarte</h3>
         <!-- Mostrar errores -->
         <?php 
